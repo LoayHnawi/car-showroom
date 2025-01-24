@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>car management</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div style="margin-top: 100px;"  align="center" class="container">
+    <h1>The Message :</h1>
+    <br>
+    <form action="#" th:action="@{/javainuse-rabbitmq/send}" th:object="${message}" method="post">
+
+        <input type="text" th:field="*{Email}" placeholder="Email" class="form-control mb-4 col-4" >
+        <input type="text" th:field="*{text}" placeholder="Text" class="form-control mb-4 col-4" >
+        <input type="text" th:field="*{date}" placeholder="Date" class="form-control mb-4 col-4">
+        <br>
+        <button style="margin-top: 70px;" type="submit" class="btn btn-info col-2">Send This Message</button>
+    </form>
+</div>
+</body>
+</html>

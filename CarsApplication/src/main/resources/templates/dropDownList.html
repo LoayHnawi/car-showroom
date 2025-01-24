@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Car System</title>
+</head>
+<body bgcolor="gray">
+<div align="center">
+    <br>
+    <h1><center>The List Of Sold Cars</center></h1>
+    <br/><br/>
+    <table border="1" class="table table-stripd table-responsive-md">
+        <thead>
+        <tr>
+            <th>ID </th>
+            <th>name car </th>
+            <th>Price </th>
+            <th>Number Disk </th>
+            <th>Sell Price</th>
+            <th>Name Buyer</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="Sell : ${sell}">
+            <td th:text="${Sell.id}">Car ID</td>
+            <td th:text="${Sell.name}"> Name</td>
+            <td th:text="${Sell.price}">Price</td>
+            <td th:text="${Sell.num_disk}">Number disk</td>
+            <td th:text="${Sell.sell_price}">Sell Price</td>
+            <td th:text="${Sell.name_buyer}">Name Buyer</td>
+            <td>
+                <a th:href="@{'/api/car/del/'+${Sell.id}}">Delete</a>
+            </td>
+
+        </tr>
+
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="www.thymeleaf.org">-->
+<!--<head>-->
+<!--    <meta charset="ISO-8859-1">-->
+<!--    <title>Car System</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<form align="center" >-->
+<!--    <br>-->
+<!--    <h1><center>The List Of Unsold Cars</center></h1>-->
+<!--    <br><br>-->
+
+<!--    <table border="1" class="table table-stripd table-responsive-md">-->
+
+<!--        <tbody>-->
+
+
+
+<!--           <h2>Select a Car :</h2>-->
+<!--          <select th:field="*{car}" >-->
+
+<!--                <option th:each="Car : ${car}"-->
+<!--                        th:value="${carOption}"-->
+<!--                        th:text="${Car}"-->
+<!--                        th:selected="${Car.getId()}">-->
+<!--                </option>-->
+<!--            </select>-->
+<!--           <a th:href="@{'/idSell/'+${selected}}">Sell</a>-->
+
+
+
+
+
+
+
+<!--&lt;!&ndash;        <a th:href="@{'/idSell/'+${carOption}}">Sell</a>&ndash;&gt;-->
+
+<!--        &lt;!&ndash;                <option value="default">CarsList</option>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <p th:if="${#Car.Name == }" th:object="${car}">Incorrect date>&ndash;&gt;-->
+
+<!--&lt;!&ndash;          <p th:each="Car : ${car}"&ndash;&gt;-->
+<!--&lt;!&ndash;             th:value="${carSel}"&ndash;&gt;-->
+<!--&lt;!&ndash;             th:if="${#Car == carOption}">&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <form action="#" th:action="@{/saveDrop}" th:object="${carSel}" method="post">&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <td> price :</td>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="text" th:field="*{sell_price}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <br>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;                <td>Customer Name:</td>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <input type="text" th:field="*{name_buyer}"/>&ndash;&gt;-->
+<!--&lt;!&ndash;        <button type="submit" class="btn btn-info col-2">Sell The Car</button>&ndash;&gt;-->
+<!--&lt;!&ndash;        </form>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;        </p>&ndash;&gt;&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </p>&ndash;&gt;-->
+
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+

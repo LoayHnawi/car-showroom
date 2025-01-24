@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="gray">
+
+<form style="margin-top: 100px;" align="center" action="#" th:action="@{/api/car/saveU}" th:object="${updateC}" method="post">
+
+    <td>New Name : </td>
+    <input  type="text" th:field="*{name}"/>
+    <br>
+    <td>New Price : </td>
+    <input style="margin-top: 50px;" type="text" th:field="*{price}"/>
+    <br>
+    <td>New NumDisk : </td>
+    <input  style="margin-top: 50px;"  type="text" th:field="*{num_disk}"/>
+    <br>
+    <button style="margin-top: 100px;" type="submit" class="btn btn-info col-2">Update The Car</button>
+</form>
+
+</body>
+</html>

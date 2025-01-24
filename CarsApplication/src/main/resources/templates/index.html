@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Car System</title>
+</head>
+<body  th:style="'background-image:url(' + @{../images/mmm.jpg} + '); background-repeat: no-repeat, repeat; background-size: cover;'" bgcolor="gray">
+<div align="center">
+	<br>
+	<h1>Car System</h1>
+	<a  th:href="@{/api/car/newCar}" class="btn btn-primary btn-sm mb-3">Create new Car</a>
+	<br/><br/>
+	<table border="1" class="table table-stripd table-responsive-md" bgcolor="gray">
+		<thead>
+		<tr>
+<!--			<th>ID </th>-->
+			<th>name car </th>
+			<th>Price </th>
+			<th>Number Disk </th>
+
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="Car : ${car}">
+<!--			<td th:text="${Car.id}">Car ID</td>-->
+			<td th:text="${Car.name}"> Name</td>
+			<td th:text="${Car.price}">Price</td>
+			<td th:text="${Car.num_disk}">Number disk</td>
+
+			<td>
+				&nbsp;&nbsp;&nbsp;&nbsp;
+				<a th:href="@{'/api/car/update/'+${Car.id}}">Update</a>
+				<a th:href="@{'/api/car/idSell/'+${Car.id}}">Sell</a>
+				<a th:href="@{'/api/car/delete/'+${Car.id}}">Delete</a>
+			</td>
+
+		</tr>
+
+		</tbody>
+	</table>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<!DOCTYPE HTML>-->
+<!--<html  xmlns:th="http://www.thymeleaf.org">-->
+
+<!--<head>-->
+	<!--<title>reem talal</title>-->
+	<!--<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />-->
+<!--</head>-->
+<!--<body>-->
+<!--<p th:text="'reem talal index" />-->
+
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--&lt;!&ndash;<!DOCTYPE html>-->
+<!--<html xmlns:th="www.thymeleaf.org">-->
+<!--<head>-->
+<!--<meta charset="ISO-8859-1">-->
+<!--<title>reem talal</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div align="center">-->
+<!--<h1>PhoneBook</h1>-->
+<!--<a href="new">Create new contact</a>-->
+<!--<br/><br/>-->
+<!--<table border="1" cellpadding="10"> -->
+<!--<thead>-->
+<!--<tr>-->
+	<!--<th>Contact ID </th>-->
+	<!--<th>First Name </th>-->
+	<!--<th>Last Name </th>-->
+	<!--<th>Branch</th>-->
+	<!--<th>Number  </th>-->
+	<!---->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr th:each="contact : ${contactList}">-->
+<!--<td th:text="${contact.id}">Contact ID</td>-->
+<!--<td th:text="${contact.Fname}">First Name</td>-->
+<!--<td th:text="${contact.Lname}">Last Name</td>-->
+<!--<td th:text="${contact.branch}">branch</td>-->
+<!--<td th:text="${contact.number}">Number</td>-->
+<!--<td>-->
+<!--<a th:href="@{'/edit/'+${contact.id}}">Edit</a>-->
+<!--&nbsp;&nbsp;&nbsp;&nbsp;-->
+<!--<a th:href="@{'/delete/'+${contact.id}}">Delete</a>-->
+
+<!--</td>-->
+
+
+
+<!--</tr>-->
+
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html> &ndash;&gt;-->

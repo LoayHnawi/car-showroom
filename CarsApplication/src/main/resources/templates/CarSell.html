@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body bgcolor="gray">
+
+<form style="margin-top: 200px;" align="center" action="#" th:action="@{/api/car/saveD}" th:object="${sellC}" method="post">
+
+    <td>Customer Name:</td>
+            <input  style="margin-bottom: 50px;" type="text" th:field="*{name_buyer}"/>
+        <br>
+    <td> Sell price :</td>
+            <input type="text" th:field="*{sell_price}"/>
+        <br>
+    <button style="margin-top: 100px;" type="submit" class="btn btn-info col-2">Sell The Car</button>
+</form>
+
+</body>
+</html>
